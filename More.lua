@@ -12,6 +12,7 @@ if (cus_asset) then
     Sound.SoundId = data
     Sound.Parent = game.SoundService
     Sound.Looped = true
+    Sound.Volume = 2
     Sound:Play()
     task.wait(10)
     game.StarterGui:SetCore("SendNotification", {
