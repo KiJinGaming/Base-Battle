@@ -44,16 +44,8 @@ local function closeToMouse()
     return target;
 end
 local old;
-local p = nil;
-old = hookfunction(require(game.ReplicatedStorage.Libraries.Gameplay).CastMouseRay, function(...)
-    p = closeToMouse();
-    return p and p.Character and p.Character.PrimaryPart or old(...)
-end)
-local old2;
-old2 = hookfunction(require(game.ReplicatedStorage.Libraries.Gameplay).GetDir, function(...)
 
-    local a = p and p.Character and p.Character.PrimaryPart.Position + Vector3.new(0, 0, 0);
-    local rt = {old2(...)}
-    rt[1] = a or rt[1];
-    return table.unpack(rt)
+old = hookfunction(require(game.ReplicatedStorage.Libraries.Gameplay).CastMouseRay, function(...)
+    local p = closeToMouse();
+    return p and p.Character and p.Character.PrimaryPart or old(...)
 end)
