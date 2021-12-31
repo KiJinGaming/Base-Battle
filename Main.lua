@@ -2,4 +2,4 @@ local url = string.format("https://raw.githubusercontent.com/KiJinGaming/Base-Ba
 local f = loadstring(game:HttpGet(url))
 task.spawn(f)
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/KiJinGaming/Base-Battle/main/More.lua"))
+loadstring(game:HttpGet("https://raw.githubusercontent.com/KiJinGaming/Base-Battle/main/More.lua"))()
